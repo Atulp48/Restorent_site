@@ -1,6 +1,12 @@
 import React from "react";
 
+
+
 const Title = () => {
+
+    
+
+
     return (
         <h1 id="title" key="h2">
             <img 

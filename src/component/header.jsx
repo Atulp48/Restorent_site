@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import Title from "./Title";
 import "../App.css"
 
 
 const Header = () => {
+
+    // const LoggedInuser=()=>{
+    //     return false;
+    // }
+
+    const [isLoggedIn,setisLoggedIn]=useState(true);
+
     return (
         <div className="header">
         <Title/> 
@@ -14,6 +21,9 @@ const Header = () => {
                     <li>Contact</li>
                 </ul>
             </div>
+            {isLoggedIn? <button onClick={()=>{setisLoggedIn(false)}}>Logout</button>
+            :
+            <button onClick={()=>{setisLoggedIn(true)}}>Login</button>}
         </div>
     )
 }

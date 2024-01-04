@@ -6,9 +6,6 @@ import Loader from "./loader";
 
 
 
-
-
-
 const Body = () => {  
 
         const [restorents, setRestorents] = useState([]);
@@ -19,7 +16,7 @@ const Body = () => {
 
         const filterData=(searchTxt, allRestorents)=> {
             const filterdta = allRestorents.filter((restorent) =>
-            restorent.info.name.includes(searchTxt)
+            restorent.info.name?.toLowerCase().includes(searchTxt?.toLowerCase())
             );
          return filterdta;
         } 

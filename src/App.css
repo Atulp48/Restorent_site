@@ -115,3 +115,37 @@
 
 
    */
+
+
+   /* css for shimmer card loader */
+
+   .shimmerCard{
+
+    width: 200px;
+    height: 200px;
+    background: lightgray;
+    margin: 20px;
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
+
+
+   .LOADIMG{
+    width: 70px;
+    height: 70px;
+    border-radius: 40px;
+   }
+
+   .logged{
+    border-radius: 30px;
+    margin: 20px;
+    padding: 10px;
+    background: lightpink;
+    font-weight: bold;
+    height: 70px;
+    border: none;
+   }
+
+   

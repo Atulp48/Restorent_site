@@ -10,7 +10,7 @@ const  RestorentCart=({info})=>{
         />
         <h2>{info.name}</h2>
         <h4>{info.costForTwo}</h4>
-        <p1>{info.name}</p1>
+        <p>{info.name}</p>
         <h5>{info.locality}</h5>
         </div>
     )

@@ -21,9 +21,9 @@ const Header = () => {
                     <li>Contact</li>
                 </ul>
             </div>
-            {isLoggedIn? <button onClick={()=>{setisLoggedIn(false)}}>Logout</button>
+            {isLoggedIn? <button className="logged" onClick={()=>{setisLoggedIn(false)}}>Logout</button>
             :
-            <button onClick={()=>{setisLoggedIn(true)}}>Login</button>}
+            <button className="logged" onClick={()=>{setisLoggedIn(true)}}>Login</button>}
         </div>
     )
 }

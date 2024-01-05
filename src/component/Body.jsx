@@ -14,7 +14,7 @@ const Body = () => {
 
         const filterData=(searchTxt, allRestorents)=> {
             const filterdta = allRestorents.filter((restorent) =>
-            restorent.info.name?.toLowerCase().includes(searchTxt?.toLowerCase())
+            restorent.action.text?.toLowerCase().includes(searchTxt?.toLowerCase())
             );
         return filterdta;
         } 
@@ -30,8 +30,8 @@ const Body = () => {
           const jsn= await data.json();
           // console.log(jsn);
           // console.log(jsn?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
-          setRestorents(jsn?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-          setallRestorents(jsn?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+          setRestorents(jsn?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.info);
+          setallRestorents(jsn?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.info);
         }
         catch(err){
           console.log(err)
@@ -68,7 +68,7 @@ const Body = () => {
           <div className="body">
             {
               restorents.map((restorent) => {
-                return (<RestorentCart {...restorent} key={restorent.info.id} />)
+                return (<RestorentCart {...restorent} key={restorent.id} />)
               })
             }
           </div>
